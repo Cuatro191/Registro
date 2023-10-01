@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Inicio de Sesión</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            var users = JSON.parse(localStorage.getItem("users"));
+            var validUser = users.find(function(user) {
+                return user.username === username && user.password === password;
+            });
+            
+            if (validUser) {
+                alert("Inicio de sesión exitoso");
+                window.location.href = "Principal.html";
+            } else {
+                alert("Credenciales inválidas. Inténtalo de nuevo.");
+            }
+        }
+    </script>
+</head>
+<body>
+     <header> 
+        <div class="caja">
+        <h1><img id="hea" src="https://www.edcremindercoins.com/cdn/shop/products/edcremindermementomoricoins.jpg?v=1681395136" alt="Logo de la Barberia Alura"></h1>
+        <div id="menu-toggle" class="menu-toggle">&#9776;</div>
+        <nav>
+         <ul>
+           <li><a href="Login.html">Home</a></li> 
+                 <li><a href="index.html">Registro</a></li>
+                 <li><a href="contacto.html">Contacto</a></li>
+         </ul>
+        </nav>
+        </div>
+      </header>
+
+    <div class="inicio">
+        <div class="logind">
+        <div class="imglogin">
+            <img class="loginimg" src="https://us.123rf.com/450wm/anatolir/anatolir2205/anatolir220500616/186827885-vector-de-esquema-de-icono-de-contrase%C3%B1a-de-inicio-de-sesi%C3%B3n-registro-de-p%C3%A1gina-pantalla-de.jpg?ver=6" alt="Imagen login">
+        </div>
+    <h2>Memento</h2><br>
+    <h2>Acceso</h2>
+    <form>
+        <label for="username">Usuario:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        
+        <label for="password">Contraseña:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <br>
+        <input type="button" value="Iniciar sesión" onclick="login()"><br><br>
+     <a class="boton" href="Prueba.html"><input type="button" value="Regístrate"></a><br> <br>
+     <a class="boton" href="reset_password.html">Restablecer contraseña</a>
+     </form>
+    </div>
+    </div>
+    <footer>
+        <img id="gojo" src="https://aniyuki.com/wp-content/uploads/2023/07/aniyuki-gojo-satoru-coloring-page-10.jpg" alt="Logo Memento">
+        <p class="copyright">&copy Copyright Memento - 2023</p>
+    </footer>
+</body>
+</html>

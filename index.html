@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header> 
+        <div class="caja">
+        <h1><img id="hea" src="https://www.edcremindercoins.com/cdn/shop/products/edcremindermementomoricoins.jpg?v=1681395136" alt="Logo de la Barberia Alura"></h1>
+        <div id="menu-toggle" class="menu-toggle">&#9776;</div>
+        <nav>
+         <ul>
+           <li><a href="Login.html">Home</a></li> 
+                 <li><a href="index.html">Registro</a></li>
+                 <li><a href="contacto.html">Contacto</a></li>
+         </ul>
+        </nav>
+        </div>
+      </header>
+    <h1 id="titulo">Formulario de Registro</h1>
+    <div class="container">
+    <div class="imge">
+    <img src="https://cdn-icons-png.flaticon.com/512/5146/5146927.png" alt="RegistroIMG">
+    </div>
+    <div class="form">
+    <form id="registrationForm">
+        <label for="id">ID:</label><br>
+        <input type="text" id="id" name="id"><br>
+
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="apellido">Apellido</label><br>
+        <input type="text" id="apellido" name="apellido"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="cedula">Cédula:</label><br>
+        <input type="text" id="cedula" name="cedula" pattern="\d+"><br>
+        
+        <label for="direccion">Direccion</label><br>
+        <input type="text" id="direccion" name="direccion"><br>
+        
+        <label for="telefono">Telefono</label><br>
+        <input type="number" id="telefono" name="telefono"><br>
+        
+        <label for="pais">Pais de recidencia</label><br>
+        <input type="text" id="pais" name="pais"><br>
+
+        <label for="edad">Edad</label><br>
+        <input type="text" id="edad" name="edad"><br>
+        <button type="submit" id="registro">Registrarse</button>
+    </form>
+    <button id="inicio">Inicio de sesion</button>
+    </div>
+    </div>
+    <button id="listUsers">Listar Usuarios</button>
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Cédula</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th>Pais</th>
+                <th>Edad</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+        
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <img id="modalImage" src="" alt="Imagen del modal">
+        <p id="modalMessage"></p>
+    </div>
+</div>
+    </table>
+    <footer>
+        <img id="gojo" src="https://aniyuki.com/wp-content/uploads/2023/07/aniyuki-gojo-satoru-coloring-page-10.jpg" alt="Logo Memento">
+        <p class="copyright">&copy Copyright Memento - 2023</p>
+    </footer>
+   <script src="script.js"></script>
+</body>
+</html>
